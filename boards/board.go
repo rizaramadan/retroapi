@@ -5,14 +5,12 @@ import (
 	"net/http"
 )
 
-type BoardHandler struct { }
-
 type Board struct {
 	Name        string
 	Description string
 }
 
-func InitBoardHandler(g *echo.Group) error {
+func InitBoardApi(g *echo.Group) error {
 	g.GET("/boards", List)
 	return nil
 }

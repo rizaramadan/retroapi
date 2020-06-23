@@ -5,9 +5,14 @@ import (
 	"github.com/rizaramadan/retroapi/boards"
 )
 
+var (
+	prefix string = "/api"
+	port string = ":1323"
+)
+
 func main() {
 	e := echo.New()
-	g := e.Group("/api")
-	boards.InitBoardHandler(g)
-	e.Logger.Fatal(e.Start(":1323"))
+	g := e.Group(prefix)
+	boards.InitBoardApi(g)
+	e.Logger.Fatal(e.Start(port))
 }
