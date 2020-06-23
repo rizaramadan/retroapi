@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+//TODO: refactor this to be separated from handlers
 type Board struct {
 	Name        string
 	Description string
@@ -15,6 +16,7 @@ func InitBoardApi(g *echo.Group) error {
 	return nil
 }
 
+//TODO: get this data from some sort of repository
 func List(c echo.Context) error {
 	var b [3]*Board
 	b[0] = &Board {
