@@ -16,7 +16,7 @@ func InitBoardApi(g *echo.Group) error {
 }
 
 func List(c echo.Context) error {
-	var b [2]*Board
+	var b [3]*Board
 	b[0] = &Board {
 		Name:  "Jon",
 		Description: "this is jon board",
@@ -24,6 +24,10 @@ func List(c echo.Context) error {
 	b[1] = &Board {
 		Name:  "Doe",
 		Description: "this is doe board",
+	}
+	b[2] = &Board {
+		Name:  "Tiger",
+		Description: "this is tiger board",
 	}
 	return c.JSONPretty(http.StatusOK, b, " ")
 }

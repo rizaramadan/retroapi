@@ -3,7 +3,6 @@ module github.com/rizaramadan/retroapi
 go 1.14
 
 require (
-	github.com/labstack/echo v3.3.10+incompatible
 	github.com/labstack/echo/v4 v4.1.16
 	github.com/valyala/fasttemplate v1.1.1 // indirect
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
